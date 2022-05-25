@@ -15,18 +15,18 @@
         <nav class="nav container">
 
             <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list grid">
+                <ul class="nav-list grid" id="nav-list">
                     <li class="nav-item">
-                        <a href="#about-section" class="">Sobre</a> 
+                        <a href="#about" class="">Sobre</a> 
                     </li>
                     <li class="nav-item">
-                        <a href="#skills-section" class="">Skills</a>
+                        <a href="#skills" class="">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#projects-section" class="">Projetos</a>
+                        <a href="#projects" class="">Projetos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact-section">Contatos</a>
+                        <a href="#contact">Contatos</a>
                     </li>
                 </ul>
                 <i class="uil uil-times nav-close" id="nav-close"></i>
@@ -34,10 +34,8 @@
             
             <div class="nav-buttons">
                 <button class="button">Dowload CV</button>
-                <div class="menu-theme">
-                    <div class="theme-button" id="theme-button">
-                        <i class="uil uil-moon"></i>
-                    </div>
+                <div class="menu-and-theme">
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
                     <div class="menu-toggle" id="menu-toggle">
                         <i class="uil uil-bars"></i>
                     </div>
@@ -47,25 +45,44 @@
         </nav>
     </header>
     <main>
-        <section class="section" id="presentation-section">
-            <div class="presentation-content">
+        <section class="section" id="home">
+
+            <div class="home-content">
                 <h1>Olá, sou a Mariana</h1>
                 <p class="subtitle">&lt; Estudante de Ciências & Tecnologia na UFABC /&gt;</p>
                 <p>FrontEnd Developer, em busca de novos conhecimentos e desenvolvimento pessoal.</p>
+
+                <div class="home-social">
+                    <a href="https://www.linkedin.com/in/mariana-agostinelli/" target="_blank">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/maagostinelli" target="_blank">
+                        <i class="uil uil-github"></i>
+                    </a>
+                    
+                </div>
+
             </div>
             <img src="./assets/images/photoPortfolio.png" alt="foto de apresentação Mariana Agostinelli" />
         </section>
-        <section class="section" id="about-section">
+        <div>
+            <a href="#about" class="scroll-down">
+                <i class="uil uil-angle-down"></i>
+            </a>
+        </div>
+        <section class="section" id="about">
+
             <div class="section-name">
                 <img src="./assets/images/cross.png" />
-                <h2>Sobre</h2>
+                <h1>Sobre</h1>
             </div>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium incidunt voluptate quia nostrum ea, quidem possimus iste tempore, in at mollitia tempora repudiandae aut sequi assumenda esse tenetur! Reprehenderit?</p>
         </section>
-        <section class="section" id="skills-section">
+        <section class="section" id="skills">
+
             <div class="section-name">
                 <img src="./assets/images/cross.png" />
-                <h2>Skills</h2>
+                <h1>Skills</h1>
             </div>
             <section class="skill-type">
                 <img src="" alt="frontEnd menu" class="hidden">
@@ -114,11 +131,13 @@
                     </div>
                 </div>
             </section>
+
         </section>
-        <section class="section" id="projects-section">
+        <section class="section" id="projects">
+
             <div class="section-name">
                 <img src="./assets/images/cross.png" />
-                <h2>Projetos</h2>
+                <h1>Projetos</h1>
             </div>
             <div class="display-projects">
                 <div class="project">
@@ -137,16 +156,18 @@
                     </a>
                 </div>
             </div>
+
         </section>
-        <section class="section" id="contact-section">
+        <section class="section" id="contact">
+
             <div class="section-name">
                 <img src="./assets/images/cross.png" />
-                <h2>Contato</h2>
+                <h1>Contato</h1>
             </div>
             <div class="contatos">
-                <p><img class="contact-icons" src="./assets/images/phoneIcon.svg" />(11)96482-8070</p>
-                <p><img class="contact-icons" src="./assets/images/emailIcon.svg" />marianaagost2@gmail.com</p>
-                <p><img class="contact-icons" src="./assets/images/locationIcon.svg" />Rua Debret,61 - São Paulo, SP</p>
+                <p><i class="uil uil-phone contact-icon"></i>(11)96482-8070</p>
+                <p><i class="uil uil-envelope contact-icon"></i>marianaagost2@gmail.com</p>
+                <p><i class="uil uil-location-pin-alt contact-icon"></i>Rua Debret,61 - São Paulo, SP</p>
             </div>
             <form action="">
                 <input type="text" placeholder="Nome">
@@ -156,28 +177,19 @@
                     <button class="button" type="submit">Enviar</button>
             </form>
             <div class="social-media">
-                <a href="https://github.com/maagostinelli" target="_blank">
-                    <img src="./assets/images/githubIcon.svg" alt="github-icon"/>
-                </a>
                 <a href="https://www.linkedin.com/in/mariana-agostinelli/" target="_blank">
-                    <img src="./assets/images/linkedinIcon.svg" alt="link linkedin"/>
+                    <i class="uil uil-linkedin"></i>
+                </a>
+                <a href="https://github.com/maagostinelli" target="_blank">
+                    <i class="uil uil-github"></i>
                 </a>
                 <a href="" target="_blank">
-                    <img src="" alt="link figma"/>
+                    <i class="uil uil-instagram-alt"></i>
                 </a>
             </div>
+
         </section>
   </main>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
-
-<!--
-    <i class="uil uil-sun"></i>
-    <i class="uil uil-phone"></i>
-    <i class="uil uil-envelope"></i>
-    <i class="uil uil-location-pin-alt"></i>
-    <i class="uil uil-linkedin"></i>
-    <i class="uil uil-github"></i>
-    <i class="uil uil-instagram-alt"></i>
--->

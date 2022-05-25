@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
-    --light-background: #EDEDED;
-    --light-secondary: #C4C4C4;
+    --background-color: #EDEDED;
+    --secondary-color: #C4C4C4;
     --dark-background: #18181B;
     --dark-secondary: #313131;
     --blue:#33A9AC;
     --dark-orange:#F86041;
     --light-orange:#FFA646;
-    --text-in-light: #000;
+    --body-text: #000;
     --text-in-dark: #fff;
 
     --body-font: 'Lato', 'Helvetica', sans-serif;
@@ -25,8 +25,10 @@
     /*----- ELEMENTS SIZES  -----*/
     --header-height: 3.25rem;
 
-    --button-height: 2.5rem; /*40px*/
+    --button-height: 2.5rem; 
     --button-width: 6.25rem;
+
+    --section-name-img: ;
 
     /*------ BORDER RDS ------*/
     --default-radius: .5rem; /*8px*/
@@ -41,6 +43,14 @@
     --index-modal: 1000;
 }
 
+body.dark-mode{
+    --background-color: #18181B;
+    --secondary-color: #313131;
+    --body-text: #fff;
+
+    transition: 0.3s;
+}
+
 /*------ FONT TO LARGE SCREEN ------*/
 @media screen and (min-width: 968px) {
     :root {
@@ -48,7 +58,7 @@
         --h3-font-size: 1.75rem; /*32px*/
         --normal-font-size: 1.25rem; /*24px*/
 
-        --button-height: 3rem;
+        --button-height: 2.75rem;
         --button-width: 9rem;
 
         --default-radius: .625rem; /*10px*/
@@ -71,8 +81,8 @@ html {
 body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    color:var(--text-in-light);
-    background-color: var(--light-background);
+    color:var(--body-text);
+    background-color: var(--background-color);
 }
 
 h1,h2,h3{
@@ -88,13 +98,22 @@ img {
     height: auto;
 }
 
+a {
+    text-decoration: none;
+    color: var(--body-text);
+}
+
 main {
     width: 80%;
     margin: auto;
 }
 
 .section {
-    margin: 5rem 0 3rem;
+    width: 90%;
+    padding: 5rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -109,7 +128,7 @@ main {
     top: 0;
     right: 0;
     padding: var(--big-margin) auto var(--small-margin) auto;
-    background-color: var(--light-background);
+    background-color: var(--background-color);
   }
 
 /*--------------- NAV ---------------*/
@@ -142,11 +161,9 @@ ul.nav-list {
         right: 0;
         width: 100%;
         padding: 1.5rem 1.5rem 2rem;
-        background-color: var(--light-background);
+        background-color: var(--background-color);
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
         border-radius: var(--default-radius);
-        
-        transition: 0.3s;
     }
 
     ul.nav-list {
@@ -160,9 +177,8 @@ ul.nav-list {
         position: absolute;
         font-size: 1.5rem;
         font-weight: var(--font-bold);
-        color: var(--text-in-light);
         top: 1.2rem;
-        right: 1.5rem;
+        right: 2.5rem;
     }
     
     .nav-close:hover, .menu-toggle:hover {
@@ -172,6 +188,12 @@ ul.nav-list {
     .menu-open {
         z-index: var(--index-modal);
         top: 0;
+    }
+
+    .nav-buttons {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -185,7 +207,7 @@ ul.nav-list {
     text-decoration: none;
     margin: 0 6px 0 6px;
     font: var(--font-regular) var(--normal-font-size) var(--body-font);
-    color: var(--dark-background);
+    color: var(--body-text);
 }
 
 .nav-item a:hover {
@@ -193,8 +215,7 @@ ul.nav-list {
     transition: .3s;
 }
 
-/*-----------------------------------------------------------------------------------*/
-
+/*--------------- BUTTONS ---------------*/
 .button {
     width: var(--button-width);
     height: var(--button-height);
@@ -205,33 +226,39 @@ ul.nav-list {
 
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    color: var(--light-background);
+    color: var(--background-color);
 
-    transition-duration: 0.5s;
+    transition-duration: .5s;
 }
 
 .button:hover {
     background-color: var(--dark-orange);
 }
 
-
-/*------------ NAV ------------*/
-/*----------SECTIONS----------*/
-/*----------PRESENTATION----------*/
-/*----------EMAIL FORM----------*/
-/*----------EMAIL FORM----------*/
-
-/*
-.dark-mode{
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
+.menu-and-theme {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: .5rem;
 }
 
-nav button img{
-    width: 30px;
-    height: 30px;
+.change-theme {
+    font-size: 1.25rem;
+}
+
+.change-theme:hover {
+    color: var(--blue);
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.scroll-down i {
+    display: block;
+    width: 90%;
+    margin: auto;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--dark-orange);
 }
 
 
@@ -250,16 +277,7 @@ nav button img{
     width: 40px;
 }
 
-
-#presentation-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-}
-
-.presentation-content {
+.home-content {
     display: block;
     width: 600px;
     height: auto;
@@ -269,14 +287,14 @@ nav button img{
     text-align: center;
 }
 
-.presentation-content .subtitle {
+.home-content .subtitle {
     font-size: 26px;
     color: var(--blue);
 }
 
-#presentation-section img {
-      width: 500px;
-      height: 500px;
+#home img {
+      width: 400px;
+      height: 400px;
 }
 
 
@@ -310,7 +328,7 @@ nav button img{
     width: 422px;
     height: 24px;
     border-radius: 12px;
-    background-color: var(--light-secondary) ;
+    background-color: var(--secondary-color) ;
 }
 form input {
     display: block;
@@ -339,4 +357,3 @@ form textarea::placeholder, input::placeholder {
     color: var(--dark-orange);  
 }
     
-*/
