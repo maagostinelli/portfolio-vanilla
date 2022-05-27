@@ -28,7 +28,8 @@
     --button-height: 2.5rem; 
     --button-width: 6.25rem;
 
-    --section-name-img: ;
+    --section-name-img: 1.75rem;
+    --home-img: 20rem;
 
     /*------ BORDER RDS ------*/
     --default-radius: .5rem; /*8px*/
@@ -65,6 +66,9 @@ body.dark-mode{
 
         --small-margin: .5rem; /*8px*/
         --big-margin: 1rem; /*16px*/
+
+        --section-name-img: 2.5rem;
+        --home-img: 25rem;
     }
 }
 
@@ -83,6 +87,8 @@ body {
     font-size: var(--normal-font-size);
     color:var(--body-text);
     background-color: var(--background-color);
+    
+    transition: .3s;
 }
 
 h1,h2,h3{
@@ -129,6 +135,8 @@ main {
     right: 0;
     padding: var(--big-margin) auto var(--small-margin) auto;
     background-color: var(--background-color);
+    
+    transition: .3s;
   }
 
 /*--------------- NAV ---------------*/
@@ -250,16 +258,66 @@ ul.nav-list {
     color: var(--blue);
 }
 
-/*-----------------------------------------------------------------------------------*/
+/*---------------  HOME  ---------------*/
+#home {
+    height: 80vh;
+    flex-wrap: wrap;
+}
+
+.home-content {
+    display: block;
+    width: 600px;
+    margin: auto;
+    padding-top: 10px;
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: var(--h1-font-size);
+}
+
+.subtitle {
+    margin-top: var(--big-margin);
+    margin-bottom: var(--big-margin);
+    font-size: var(--normal-font-size);
+    color: var(--blue);
+}
+
+.home-content h3 {
+    font-size: var(--h3-font-size);
+}
+
+.home-social {
+    display: none;
+    margin-top: var(--small-margin);
+}
+
+.scroll-div {
+    width: 3rem;
+    margin: auto;
+}
 
 .scroll-down i {
     display: block;
-    width: 90%;
-    margin: auto;
     font-size: 3rem;
     text-align: center;
     color: var(--dark-orange);
 }
+
+.scroll-down i:hover {
+    color: #f86041a1;
+}
+
+@media screen and (max-width: 767px) {
+    .home-social {
+        display: block;
+        font-size: var(--h1-font-size);
+    }
+}
+
+/*-----------------------------------------------------------------------------------*/
+
 
 
 .section-name {
@@ -275,21 +333,6 @@ ul.nav-list {
 .section-name img{
     height: 40px;
     width: 40px;
-}
-
-.home-content {
-    display: block;
-    width: 600px;
-    height: auto;
-    margin-left: 20px;
-    padding-top: 10px;
-    font: 36px 'Lato';
-    text-align: center;
-}
-
-.home-content .subtitle {
-    font-size: 26px;
-    color: var(--blue);
 }
 
 #home img {
