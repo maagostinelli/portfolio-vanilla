@@ -29,7 +29,7 @@
     --button-width: 6.25rem;
 
     --section-name-img: 1.75rem;
-    --home-img: 20rem;
+    --home-img: 18rem;
 
     /*------ BORDER RDS ------*/
     --default-radius: .5rem; /*8px*/
@@ -67,7 +67,7 @@ body.dark-mode{
         --small-margin: .5rem; /*8px*/
         --big-margin: 1rem; /*16px*/
 
-        --section-name-img: 2.5rem;
+        --section-name-img: 2.25rem;
         --home-img: 25rem;
     }
 }
@@ -110,12 +110,11 @@ a {
 }
 
 main {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
 .section {
-    width: 90%;
     padding: 5rem 0 3rem;
     display: flex;
     justify-content: space-between;
@@ -163,6 +162,9 @@ ul.nav-list {
 }
 
 @media screen and (max-width: 767px){
+    .nav {
+        justify-content: center;
+    }
     .nav-menu {
         position: fixed;
         top: -100%;
@@ -180,13 +182,18 @@ ul.nav-list {
         gap: 1.5rem;
     }
 
+    .menu-and-theme {
+        position: relative;
+
+    }
+
     .nav-close, .menu-toggle {
         display: block;
         position: absolute;
         font-size: 1.5rem;
         font-weight: var(--font-bold);
-        top: 1.2rem;
-        right: 2.5rem;
+        top: .4rem;
+        right: 2rem;
     }
     
     .nav-close:hover, .menu-toggle:hover {
@@ -260,8 +267,8 @@ ul.nav-list {
 
 /*---------------  HOME  ---------------*/
 #home {
-    height: 80vh;
-    flex-wrap: wrap;
+    height: 85vh;
+    flex-wrap: nowrap;
 }
 
 .home-content {
@@ -291,6 +298,12 @@ ul.nav-list {
 .home-social {
     display: none;
     margin-top: var(--small-margin);
+    margin-bottom: var(--small-margin);
+}
+
+#home img {
+    width: var(--home-img);
+    margin: auto;
 }
 
 .scroll-div {
@@ -310,36 +323,48 @@ ul.nav-list {
 }
 
 @media screen and (max-width: 767px) {
+    #home {
+        height: 85vh;
+        flex-wrap: wrap-reverse;
+        margin-top: 1rem;
+    }
     .home-social {
         display: block;
         font-size: var(--h1-font-size);
     }
 }
 
-/*-----------------------------------------------------------------------------------*/
-
-
-
+/*---------------  SECTIONS NAME  ---------------*/
 .section-name {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    width: 80%;
-    height: 100px;
-    font-size: var(--h3-font-size);
-
+    width: 12.5rem;
+    font-size: var(--h1-font-size);
 }
 
 .section-name img{
-    height: 40px;
-    width: 40px;
+    width: var(--section-name-img);
 }
 
-#home img {
-      width: 400px;
-      height: 400px;
+#about {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
+#about p {
+    width: 70%;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+    #about {
+        display: block;
+    }
+}
+
+/*-----------------------------------------------------------------------------------*/
 
 .stacks {
     width: 400px;
