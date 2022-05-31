@@ -28,7 +28,8 @@
     --button-height: 2.5rem; 
     --button-width: 6.25rem;
 
-    --section-name-img: 1.75rem;
+    --section-name-img: 1.25rem;
+    --section-name-div: 6.75rem;
     --home-img: 18rem;
 
     /*------ BORDER RDS ------*/
@@ -52,7 +53,7 @@ body.dark-mode{
     transition: 0.3s;
 }
 
-/*------ FONT TO LARGE SCREEN ------*/
+/*-------- TO LARGE SCREEN --------*/
 @media screen and (min-width: 968px) {
     :root {
         --h1-font-size: 2.75rem; /*48px*/
@@ -67,7 +68,8 @@ body.dark-mode{
         --small-margin: .5rem; /*8px*/
         --big-margin: 1rem; /*16px*/
 
-        --section-name-img: 2.25rem;
+        --section-name-img: 1.625rem;
+        --section-name-div: 12.5rem;
         --home-img: 25rem;
     }
 }
@@ -339,7 +341,10 @@ ul.nav-list {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    width: 12.5rem;
+    width: var(--section-name-div);
+}
+
+.section-name h1 {
     font-size: var(--h1-font-size);
 }
 
@@ -347,81 +352,149 @@ ul.nav-list {
     width: var(--section-name-img);
 }
 
+/*---------------  ABOUT  ---------------*/
+
 #about {
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
+    display: block;
 }
 
 #about p {
-    width: 70%;
-    margin-top: 1rem;
+    margin-top: .5rem;
+    margin-left: .5rem;
 }
 
-@media screen and (max-width: 767px) {
-    #about {
-        display: block;
+@media screen and (max-width: 968px) {
+    #about p {
+        margin-top: .625rem;
     }
 }
 
-/*-----------------------------------------------------------------------------------*/
-
-.stacks {
-    width: 400px;
-    height: 78px;
+/*---------------  SKILLS  ---------------*/
+#skills {
+    display: block;
 }
 
-.stacks span {
+.skills-content {
+    margin-top: var(--small-margin);
+    margin-left: var(--small-margin);
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-list {
+    width: 48%;
+}
+
+.skills-show {
+    margin-top: var(--small-margin);
+    width: 100%;
+}
+
+.skill {
+    margin-bottom: var(--small-margin);
     font-family: var(--body-font);
-    font-size: 32px;
-    color: #000;
+    font-size: var(--normal-font-size);
+    color: var(--body-text);
 }
 
-.stack-bar {
+.skill-title {
+    margin-left: var(--big-margin);
+}
+
+.skill-bar {
     position: relative;
-    width: 400px;
-    height: 24px;
-}
-
-.bar-percentage {
-    position: absolute;
-    right: 0;
-    width: 400px;
-    height: 24px;
-    border-radius: 12px;
-    background-color: var(--blue) ;
-}
-.bar-background {
-    position: absolute;
-    width: 422px;
+    width: 100%;
     height: 24px;
     border-radius: 12px;
     background-color: var(--secondary-color) ;
 }
-form input {
+
+.skill-percentage {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--blue) ;
+}
+
+.skill-percentage.bg-blue {
+    background-color: var(--blue);
+}
+.skill-percentage.bg-dark-orange {
+    background-color: var(--dark-orange);
+}
+.skill-percentage.bg-light-orange {
+    background-color: var(--light-orange);
+}
+
+@media screen and (max-width: 767px) {
+    .skills-content {
+        display: block;
+    }
+
+    .skills-content > div:first-child {
+        margin-bottom: var(--big-margin);
+    }
+
+    .skills-list {
+        width: 100%;
+    }
+
+    .skills-show {
+        display: none;
+    }
+    .skills-show.open {
+        display: block;
+    }
+
+    .skills:hover {
+        color: var(--blue);
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+#contact {
     display: block;
-    width: 300px;
-    height: 50px;
+}
+
+form input {
+    width: 80%;
+    height: var(--button-height);
     border: none;
-    border-radius: 15px;
+    border-radius: var(--default-radius);
     box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
     padding-left: 16px;
-    margin-bottom: 30px;
-  
-    font: 18px var(--body-font);
+    margin-bottom: var(--big-margin);
+
+    background-color: var(--secondary-color);
+    font: var(--normal-font-size) var(--body-font);
 }
 form textarea {
-    display: block;
-    width: 600px;
+    width: 80%;
     height: 250px;
     border: none;
-    border-radius: 15px;
+    border-radius: var(--default-radius);
     box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
     padding: 16px 0 0 16px;
+    margin-bottom: var(--big-margin);
+
     font: 18px var(--body-font);
+    background-color: var(--secondary-color);
 }
   
 form textarea::placeholder, input::placeholder {
     color: var(--dark-orange);  
+}
+
+form textarea:focus, input:focus {
+    color: var(--dark-orange);
+}
+
+@media screen and (max-width: 767px) {
+    form textarea, form input, form .button {
+        width: 100%;
+    }
 }
     

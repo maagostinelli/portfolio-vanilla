@@ -5,6 +5,8 @@ const menuList = document.querySelectorAll('.nav-item')
 
 const themeButton = document.getElementById('theme-button')
 
+const skillListOpen = document.querySelectorAll('.skills-list')
+
 // MENU OPEN/CLOSE ------------------------------------------
 menuToggle.addEventListener('click', () => {
     navMenu.classList.add('menu-open')
@@ -41,5 +43,34 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
 //fn + F2 -> replace all occurrences of variable
+
+// OPEN SKILLS LIST ----------------------------------------------
+let screenSize = $(window).width()
+$(window).resize(function () {
+    screenSize = $(window).width()
+})
+    $(skillListOpen).each( function() {
+        if (screenSize < 601) {
+            $(this).on('click', () => {
+                $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
+                $(this).children('div').toggleClass("open")
+            })
+        }
+    })
+
+// SET SKILL-BAR COLOR ----------------------------------------------
+$(document).ready(function () {
+    const skillsPercentages = $(".skill-percentage") //
+    for(i = 0; i < skillsPercentages.length; i++) {
+        let value = $(skillsPercentages[i]).attr("aria-valuenow")
+        $(skillsPercentages[i]).width(value + "%")
+        if (value >= "66") {
+            $(skillsPercentages[i]).addClass("bg-blue") 
+        } else if (value >= "33") {
+            $(skillsPercentages[i]).addClass("bg-light-orange")
+        } else {
+            $(skillsPercentages[i]).addClass("bg-dark-orange")
+        }
+    } 
+})

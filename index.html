@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Portfolio - Mariana Agostinelli</title>
 </head>
 <body>
@@ -76,7 +78,7 @@
                 <img src="./assets/images/cross.png" />
                 <h1>Sobre</h1>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium incidunt voluptate quia nostrum ea, quidem possimus iste tempore, in at mollitia tempora repudiandae aut sequi assumenda esse tenetur! Reprehenderit?</p>
+            <p>Prazer! Meu nome é Mariana e tenho 21 anos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium incidunt voluptate quia nostrum ea, quidem possimus iste tempore, in at mollitia tempora repudiandae aut sequi assumenda esse tenetur! Reprehenderit?</p>
             
         </section>
         <section class="section" id="skills">
@@ -85,53 +87,65 @@
                 <img src="./assets/images/cross.png" />
                 <h1>Skills</h1>
             </div>
-            <section class="skill-type">
-                <img src="" alt="frontEnd menu" class="hidden">
-                <span>front-end</span>
-                <div class="front-end-skills">
-                    <div class="stacks">
-                        <span class="stack-name">HTML</span>
-                        <div class="stack-bar">
-                            <div class="bar-background"></div>
-                            <div class="bar-percentage"></div>
+            <div class="skills-content">
+
+                <div class="skills-list">
+                    <i class="skills uil uil-angle-right">FrontEnd</i>
+                    <div class="skills-show">
+                        <div class="skill-data">
+                            <p class="skill-title">HTML</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="68"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="stacks">
-                        <span class="stack-name">CSS</span>
-                        <div class="stack-bar">
-                            <div class="bar-background"></div>
-                            <div class="bar-percentage"></div>
+                        <div class="skill-data">
+                            <p class="skill-title">CSS</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="62"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="stacks">
-                        <span class="stack-name">JavaScript</span>
-                        <div class="stack-bar">
-                            <div class="bar-background"></div>
-                            <div class="bar-percentage"></div>
+                        <div class="skill-data">
+                            <p class="skill-title">JavaScript</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="56"></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="skill-type">
-                <img src="" alt="" class="hidden">
-                <span>Outros</span>
-                <div class="other-skills"> 
-                    <div class="stacks">
-                        <span class="stack-name">GitHub</span>
-                        <div class="stack-bar">
-                            <div class="bar-background"></div>
-                            <div class="bar-percentage"></div>
-                        </div>
-                    </div>
-                    <div class="stacks">
-                        <span class="stack-name">Figma</span>
-                        <div class="stack-bar">
-                            <div class="bar-background"></div>
-                            <div class="bar-percentage"></div>
+                        <div class="skill-data">
+                            <p class="skill-title">React</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="25"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <div class="skills-list">
+                    <i class="skills uil uil-angle-right">???</i>
+                    <div class="skills-show">
+                        <div class="skill-data">
+                            <p class="skill-title">Github</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="45"></div>
+                            </div>
+                        </div>
+                        <div class="skill-data">
+                            <p class="skill-title">Figma</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="30"></div>
+                            </div>
+                        </div>
+                        <div class="skill-data">
+                            <p class="skill-title">???</p>
+                            <div class="skill-bar">
+                                <div class="skill-percentage" aria-valuenow="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
 
         </section>
         <section class="section" id="projects">
