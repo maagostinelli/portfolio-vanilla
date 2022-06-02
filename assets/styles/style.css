@@ -3,6 +3,7 @@
 :root {
     --background-color: #EDEDED;
     --secondary-color: #C4C4C4;
+    --form-color: #fff;
     --dark-background: #18181B;
     --dark-secondary: #313131;
     --blue:#33A9AC;
@@ -17,10 +18,6 @@
     --h1-font-size: 1.5rem; /*24px*/
     --h3-font-size: 1.125rem; /*18px*/
     --normal-font-size: 1rem; /*16px*/
-    
-    /*------ FONT WEIGHTS  ------*/
-    --font-regular: 400;
-    --font-bold: 700;
     
     /*----- ELEMENTS SIZES  -----*/
     --header-height: 3.25rem;
@@ -40,14 +37,13 @@
     --big-margin: .75rem; /*12px*/
 
     /*------- Z-INDEX -------*/
-    --index-tooltip: 10;
-    --index-fixed: 100;
     --index-modal: 1000;
 }
 
 body.dark-mode{
     --background-color: #18181B;
     --secondary-color: #313131;
+    --form-color: #313131;
     --body-text: #fff;
 
     transition: 0.3s;
@@ -93,10 +89,6 @@ body {
     transition: .3s;
 }
 
-h1,h2,h3{
-    font-weight: var(--font-regular);
-}
-
 ul {
     list-style: none;
 }
@@ -124,7 +116,6 @@ main {
 }
 
 /*---------------------------------------------------------------------------------*/
-
 /*-------------- HEADER --------------*/
   
 .header {
@@ -193,7 +184,6 @@ ul.nav-list {
         display: block;
         position: absolute;
         font-size: 1.5rem;
-        font-weight: var(--font-bold);
         top: .4rem;
         right: 2rem;
     }
@@ -223,7 +213,7 @@ ul.nav-list {
 .nav-item a {
     text-decoration: none;
     margin: 0 6px 0 6px;
-    font: var(--font-regular) var(--normal-font-size) var(--body-font);
+    font: var(--normal-font-size) var(--body-font);
     color: var(--body-text);
 }
 
@@ -452,14 +442,17 @@ ul.nav-list {
     }
 }
 
+/*---------------  PROJECTS  ---------------*/
+#projects {
+    display: block;
+}
 
-/*-----------------------------------------------------------------------------------*/
-
+/*---------------  FORM  ---------------*/
 #contact {
     display: block;
 }
 
-form input {
+form input, form textarea {
     width: 80%;
     height: var(--button-height);
     border: none;
@@ -468,20 +461,12 @@ form input {
     padding-left: 16px;
     margin-bottom: var(--big-margin);
 
-    background-color: var(--secondary-color);
+    background-color: var(--form-color);
     font: var(--normal-font-size) var(--body-font);
 }
 form textarea {
-    width: 80%;
     height: 250px;
-    border: none;
-    border-radius: var(--default-radius);
-    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
     padding: 16px 0 0 16px;
-    margin-bottom: var(--big-margin);
-
-    font: 18px var(--body-font);
-    background-color: var(--secondary-color);
 }
   
 form textarea::placeholder, input::placeholder {
@@ -497,4 +482,3 @@ form textarea:focus, input:focus {
         width: 100%;
     }
 }
-    

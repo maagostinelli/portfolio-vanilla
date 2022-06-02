@@ -46,18 +46,50 @@ themeButton.addEventListener('click', () => {
 //fn + F2 -> replace all occurrences of variable
 
 // OPEN SKILLS LIST ----------------------------------------------
-let screenSize = $(window).width()
-$(window).resize(function () {
-    screenSize = $(window).width()
+$(skillListOpen).each( function() {
+    $(this).on('click', () => {
+        if ($(window).width() < 767) {
+            $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
+            $(this).children('div').toggleClass("open")
+        }
+    })
 })
-    $(skillListOpen).each( function() {
-        if (screenSize < 601) {
+
+/*
+let screenSize = $(window).width()
+
+function handleOpenSkillList(screenSize) {
+    if (screenSize < 767) {
+        $(skillListOpen).each( function() {
             $(this).on('click', () => {
                 $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
                 $(this).children('div').toggleClass("open")
             })
-        }
+        })
+    }
+}
+
+handleOpenSkillList(screenSize)
+
+$(window).resize(function () {
+    screenSize = $(window).width()
+    handleOpenSkillList(screenSize)
+
+})
+
+$(skillListOpen).each( function() {
+    $(this).on('click', () => {
+        $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
+        $(this).children('div').toggleClass("open")
     })
+})
+
+
+let screenSize = $(window).width()
+$(window).resize(function () {
+    screenSize = $(window).width()
+})
+*/
 
 // SET SKILL-BAR COLOR ----------------------------------------------
 $(document).ready(function () {
