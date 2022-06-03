@@ -125,6 +125,7 @@ main {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1000;
     padding: var(--big-margin) auto var(--small-margin) auto;
     background-color: var(--background-color);
     
@@ -447,9 +448,55 @@ ul.nav-list {
     display: block;
 }
 
+.swiper-container {
+    margin-top: var(--small-margin);
+}
+
+.swiper-wrapper {
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    */
+}
+
+.swiper-slide {
+    display: flex;
+    height: 14rem;
+    width: 24rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--default-radius);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-img {
+    width: 8rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    padding: var(--small-margin);
+}
+
+.project-data {
+    padding: var(--small-margin);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+}
+
 /*---------------  FORM  ---------------*/
 #contact {
     display: block;
+}
+
+.contatos {
+    margin: var(--small-margin);
+}
+
+.contatos p > i {
+    color: var(--blue);
+    margin-right: var(--big-margin);
 }
 
 form input, form textarea {

@@ -55,42 +55,6 @@ $(skillListOpen).each( function() {
     })
 })
 
-/*
-let screenSize = $(window).width()
-
-function handleOpenSkillList(screenSize) {
-    if (screenSize < 767) {
-        $(skillListOpen).each( function() {
-            $(this).on('click', () => {
-                $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
-                $(this).children('div').toggleClass("open")
-            })
-        })
-    }
-}
-
-handleOpenSkillList(screenSize)
-
-$(window).resize(function () {
-    screenSize = $(window).width()
-    handleOpenSkillList(screenSize)
-
-})
-
-$(skillListOpen).each( function() {
-    $(this).on('click', () => {
-        $(this).children('i').toggleClass("uil-angle-right uil-angle-down")
-        $(this).children('div').toggleClass("open")
-    })
-})
-
-
-let screenSize = $(window).width()
-$(window).resize(function () {
-    screenSize = $(window).width()
-})
-*/
-
 // SET SKILL-BAR COLOR ----------------------------------------------
 $(document).ready(function () {
     const skillsPercentages = $(".skill-percentage") //
@@ -106,3 +70,15 @@ $(document).ready(function () {
         }
     } 
 })
+
+// PORTFOLIO SWIPER ----------------------------------------------
+let swiper = new Swiper(".swiper-container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
