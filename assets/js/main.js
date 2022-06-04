@@ -72,13 +72,14 @@ $(document).ready(function () {
 })
 
 // PORTFOLIO SWIPER ----------------------------------------------
-let swiper = new Swiper(".swiper-container", {
-    cssMode: true,
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
     loop: true,
+  
+    // Navigation arrows
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    mousewheel: true,
-    keyboard: true,
-  });
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+})

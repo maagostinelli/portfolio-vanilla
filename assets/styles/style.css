@@ -452,25 +452,22 @@ ul.nav-list {
     margin-top: var(--small-margin);
 }
 
-.swiper-wrapper {
-    /*
-    display: flex;
-    flex-wrap: wrap;
-    */
-}
+.swiper {
+    width: 80%;
+    height: 50vh;
+  }
 
 .swiper-slide {
-    display: flex;
     height: 14rem;
     width: 24rem;
-    background-color: var(--secondary-color);
+    background-color: transparent;
     border-radius: var(--default-radius);
-    align-items: center;
-    justify-content: space-between;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .project-img {
-    width: 8rem;
+    width: 10rem;
     object-fit: contain;
     border-radius: 1rem;
     padding: var(--small-margin);
@@ -480,9 +477,25 @@ ul.nav-list {
     padding: var(--small-margin);
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+#swiper-button-prev::after,  
+#swiper-button-next::after{
     content: '';
+}
+
+#swiper-button-prev i,  
+#swiper-button-next i {
+    color: var(--blue);
+    font-size: var(--h1-font-size);
+}
+
+#swiper-button-prev {
+    left: 0rem;
+    z-index: 100;
+}
+
+#swiper-button-next {
+    right: 0rem;
+    z-index: 100;
 }
 
 /*---------------  FORM  ---------------*/
@@ -491,7 +504,7 @@ ul.nav-list {
 }
 
 .contatos {
-    margin: var(--small-margin);
+    margin: var(--small-margin) 0 1.25rem var(--small-margin);
 }
 
 .contatos p > i {
@@ -522,6 +535,24 @@ form textarea::placeholder, input::placeholder {
 
 form textarea:focus, input:focus {
     color: var(--dark-orange);
+}
+
+.social-media{
+    position: absolute;
+    right: 0rem;
+}
+
+.social-media a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    font-size: 2.1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    border-radius: var(--default-radius);
+    color: var(--text-in-dark);
+    margin-bottom: var(--small-margin);
 }
 
 @media screen and (max-width: 767px) {
