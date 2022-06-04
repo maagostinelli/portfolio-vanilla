@@ -113,6 +113,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 60vh;
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -301,6 +302,7 @@ ul.nav-list {
 
 .scroll-div {
     width: 3rem;
+    height: 15vh;
     margin: auto;
 }
 
@@ -374,6 +376,10 @@ ul.nav-list {
 
 .skills-list {
     width: 48%;
+}
+
+.skills-list i {
+    font-size: var(--h3-font-size);
 }
 
 .skills-show {
@@ -543,8 +549,8 @@ form textarea:focus, input:focus {
 }
 
 .social-media a {
-    width: 3rem;
-    height: 3rem;
+    width: var(--button-height);
+    height: var(--button-height);
     display: flex;
     font-size: 2.1rem;
     align-items: center;
@@ -555,8 +561,17 @@ form textarea:focus, input:focus {
     margin-bottom: var(--small-margin);
 }
 
+.social-media a:hover {
+    background-color: var(--dark-orange);
+    transition: .5s;
+}
+
 @media screen and (max-width: 767px) {
     form textarea, form input, form .button {
+        width: 100%;
+    }
+
+    .social-media {
         width: 100%;
     }
 }

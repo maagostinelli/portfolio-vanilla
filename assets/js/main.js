@@ -7,6 +7,12 @@ const themeButton = document.getElementById('theme-button')
 
 const skillListOpen = document.querySelectorAll('.skills-list')
 
+ScrollReveal().reveal('#home', {delay: 300})
+ScrollReveal().reveal('#about', {delay: 500})
+ScrollReveal().reveal('#skills', {delay: 500})
+ScrollReveal().reveal('#projects', {delay: 500})
+ScrollReveal().reveal('#contact', {delay: 500})
+
 // MENU OPEN/CLOSE ------------------------------------------
 menuToggle.addEventListener('click', () => {
     navMenu.classList.add('menu-open')
