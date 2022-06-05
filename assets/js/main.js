@@ -7,11 +7,15 @@ const themeButton = document.getElementById('theme-button')
 
 const skillListOpen = document.querySelectorAll('.skills-list')
 
+/*
 ScrollReveal().reveal('#home', {delay: 300})
 ScrollReveal().reveal('#about', {delay: 500})
 ScrollReveal().reveal('#skills', {delay: 500})
 ScrollReveal().reveal('#projects', {delay: 500})
 ScrollReveal().reveal('#contact', {delay: 500})
+ */
+ScrollReveal().reveal('.section', {delay: 300})
+
 
 // MENU OPEN/CLOSE ------------------------------------------
 menuToggle.addEventListener('click', () => {
@@ -89,3 +93,5 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     }
 })
+
+//document.getElementById("divFirst").scrollIntoView();

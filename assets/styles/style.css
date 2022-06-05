@@ -394,6 +394,10 @@ ul.nav-list {
     color: var(--body-text);
 }
 
+.skill-data {
+    margin-bottom: var(--small-margin);
+}
+
 .skill-title {
     margin-left: var(--big-margin);
 }
@@ -507,6 +511,7 @@ ul.nav-list {
 /*---------------  FORM  ---------------*/
 #contact {
     display: block;
+    position: relative;
 }
 
 .contatos {
@@ -545,7 +550,8 @@ form textarea:focus, input:focus {
 
 .social-media{
     position: absolute;
-    right: 0rem;
+    right: 3.5rem;
+    bottom: 6.4rem;
 }
 
 .social-media a {
