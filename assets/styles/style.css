@@ -578,6 +578,11 @@ form textarea:focus, input:focus {
     }
 
     .social-media {
+        display: flex;
+        position: initial;
         width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
     }
 }
