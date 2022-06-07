@@ -226,12 +226,15 @@ ul.nav-list {
 
 /*--------------- BUTTONS ---------------*/
 .button {
+    display: flex;
     width: var(--button-width);
     height: var(--button-height);
     border: none;
     border-radius: var(--default-radius);
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
     background-color: var(--blue);
+    justify-content: center;
+    align-items: center;
 
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -534,6 +537,7 @@ form input, form textarea {
 
     background-color: var(--form-color);
     font: var(--normal-font-size) var(--body-font);
+    color: var(--body-text);
 }
 form textarea {
     height: 250px;
@@ -585,4 +589,13 @@ form textarea:focus, input:focus {
         gap: 1rem;
         margin-top: 1rem;
     }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    background-color: var(--background-color);
+    color: var(--body-text);
+    /*transition: background-color 5000s ease-in-out 0s, color 5000s 0s;*/
 }

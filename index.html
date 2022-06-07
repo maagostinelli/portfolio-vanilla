@@ -29,23 +29,23 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list grid" id="nav-list">
                     <li class="nav-item">
-                        <a href="#about" class="">Sobre</a> 
+                        <a href="" id="about-a">Sobre</a> 
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="">Skills</a>
+                        <a href="#skills" id="skills-a">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#projects" class="">Projetos</a>
+                        <a href="#projects" id="projects-a">Projetos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact">Contatos</a>
+                        <a href="#contact" id="contacts-a">Contatos</a>
                     </li>
                 </ul>
                 <i class="uil uil-times nav-close" id="nav-close"></i>
             </div>
             
             <div class="nav-buttons">
-                <button class="button">Dowload CV</button>
+                <a class="button" href="./assets/pdf/portfolioResumeMAA.pdf" download="MarianaAgostinelliResume" target="_blank">Dowload CV</a>
                 <div class="menu-and-theme">
                     <i class="uil uil-moon change-theme" id="theme-button"></i>
                     <div class="menu-toggle" id="menu-toggle">
@@ -205,10 +205,10 @@
                 <p><i class="uil uil-envelope contact-icon"></i>marianaagost2@gmail.com</p>
                 <p><i class="uil uil-location-pin-alt contact-icon"></i>Rua Debret,61 - São Paulo, SP</p>
             </div>
-            <form action="">
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="Email"/>
-                <textarea placeholder="Mensagem"></textarea>
+            <form action="https://formsubmit.co/marianaagost2@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Nome" required/>
+                <input type="email" name="email" placeholder="Email" required/>
+                <textarea name="message" placeholder="Mensagem" required></textarea>
                 <br/>
                     <button class="button" type="submit">Enviar</button>
             </form>

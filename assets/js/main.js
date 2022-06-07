@@ -4,9 +4,10 @@ const menuToggle = document.getElementById('menu-toggle')
 const menuList = document.querySelectorAll('.nav-item')
 
 const themeButton = document.getElementById('theme-button')
-
 const skillListOpen = document.querySelectorAll('.skills-list')
 
+
+// SCROLL REVEAL ------------------------------------------
 ScrollReveal().reveal('.section', {delay: 300})
 ScrollReveal().reveal('.scroll-div', {delay: 500})
 
@@ -86,5 +87,3 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     }
 })
-
-//document.getElementById("divFirst").scrollIntoView();
