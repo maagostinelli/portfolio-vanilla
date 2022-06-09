@@ -339,12 +339,6 @@ ul.nav-list {
         display: block;
         font-size: var(--h1-font-size);
     }
-
-    .scroll-div {
-        position: absolute;
-        bottom: var(--big-margin);
-        margin: auto;
-    }
 }
 
 /*---------------  SECTIONS NAME  ---------------*/
