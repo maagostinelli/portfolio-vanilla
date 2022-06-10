@@ -265,14 +265,15 @@ ul.nav-list {
 /*---------------  HOME  ---------------*/
 #home {
     height: 90vh;
-    flex-wrap: nowrap;
-    align-items: baseline;
+    width: 80vw;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    
 }
 
 .home-content {
     display: block;
     width: 600px;
-    margin: auto;
     padding-top: 10px;
     font-family: var(--body-font);
     text-align: center;
@@ -300,9 +301,8 @@ ul.nav-list {
 }
 
 #home img {
-    position: absolute;
-    right: calc(5*var(--big-margin));
     height: calc(90vh - var(--header-height));
+    left: 0;
     margin: auto;
     z-index: -1;
 }
@@ -329,11 +329,10 @@ ul.nav-list {
         height: 85vh;
         flex-wrap: wrap-reverse;
         margin-top: 1rem;
+        margin-bottom: 0;
     }
 
-    #home img {
-        position: inherit;
-    }
+
 
     .home-social {
         display: block;
@@ -444,7 +443,6 @@ ul.nav-list {
 @media screen and (max-width: 767px) {
     .skills-content {
         display: block;
-        width: 100%;
     }
 
     .skills-content > div:first-child {
@@ -477,7 +475,7 @@ ul.nav-list {
 }
 
 .swiper {
-    width: 100%;
+    width: 80%;
     height: 50vh;
   }
 
