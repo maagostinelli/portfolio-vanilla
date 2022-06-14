@@ -305,10 +305,8 @@ ul.nav-list {
 }
 
 #home img {
-    height: calc(90vh - var(--header-height));
-    left: 0;
+    width: var(--home-img);
     margin: auto;
-    z-index: -1;
 }
 .scroll-down i {
     display: block;
@@ -485,7 +483,7 @@ ul.nav-list {
   }
 
 .swiper-slide {
-    height: 14rem;
+    height: 18rem;
     width: 24rem;
     background-color: transparent;
     border-radius: var(--default-radius);
@@ -493,11 +491,17 @@ ul.nav-list {
     text-align: center;
 }
 
+.project-link:hover {
+    opacity: .7;
+    transition: .3s;
+}
+
 .project-img {
-    width: 10rem;
+    height: 10rem;
     object-fit: contain;
     border-radius: 1rem;
     padding: var(--small-margin);
+    border-radius: 1rem;
 }
 
 .project-data {
@@ -523,6 +527,15 @@ ul.nav-list {
 #swiper-button-next {
     right: 0rem;
     z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+    .swiper {
+        width: 100%;
+    }
+    .project-img {
+        height: 8rem;
+    }
 }
 
 /*---------------  FORM  ---------------*/
