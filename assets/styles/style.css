@@ -25,7 +25,7 @@
     --button-height: 2.5rem; 
     --button-width: 6.25rem;
 
-    --section-name-img: 1.25rem;
+    --section-name-img: 1rem;
     --section-name-div: 6.75rem;
     --home-img: 18rem;
 
@@ -64,7 +64,7 @@ body.dark-mode{
         --small-margin: .5rem; /*8px*/
         --big-margin: 1rem; /*16px*/
 
-        --section-name-img: 1.625rem;
+        --section-name-img: 1.5rem;
         --section-name-div: 12.5rem;
         --home-img: 25rem;
     }
@@ -273,7 +273,6 @@ ul.nav-list {
 .home-content {
     display: block;
     width: 600px;
-    margin: auto;
     padding-top: 10px;
     font-family: var(--body-font);
     text-align: center;
@@ -301,8 +300,10 @@ ul.nav-list {
 }
 
 #home img {
-    width: var(--home-img);
+    height: calc(90vh - var(--header-height));
+    left: 0;
     margin: auto;
+    z-index: -1;
 }
 
 .scroll-down i {
@@ -324,7 +325,11 @@ ul.nav-list {
         flex-wrap: wrap-reverse;
         margin-top: 1rem;
         padding-top: 3rem;
+
     }
+
+
+
     .home-social {
         display: block;
         font-size: var(--h1-font-size);
