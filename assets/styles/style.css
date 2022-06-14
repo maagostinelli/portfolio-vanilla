@@ -109,11 +109,11 @@ main {
 }
 
 .section {
-    padding: 5rem 0 3rem;
+    margin: 5rem 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60vh;
+    min-height: 50vh;
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -266,6 +266,8 @@ ul.nav-list {
 #home {
     height: 85vh;
     flex-wrap: nowrap;
+    padding-top: 2rem;
+    margin-bottom: 0;
 }
 
 .home-content {
@@ -303,14 +305,10 @@ ul.nav-list {
     margin: auto;
 }
 
-.scroll-div {
-    width: 3rem;
-    height: 15vh;
-    margin: auto;
-}
-
 .scroll-down i {
     display: block;
+    width: 3rem;
+    margin: auto;
     font-size: 3rem;
     text-align: center;
     color: var(--dark-orange);
@@ -325,6 +323,7 @@ ul.nav-list {
         height: 85vh;
         flex-wrap: wrap-reverse;
         margin-top: 1rem;
+        padding-top: 3rem;
     }
     .home-social {
         display: block;
@@ -346,22 +345,36 @@ ul.nav-list {
 
 .section-name img{
     width: var(--section-name-img);
+    margin-right: var(--small-margin);
 }
 
-/*---------------  ABOUT  ---------------*/
-
-#about {
+.section-wrapper {
     display: block;
 }
 
+/*---------------  ABOUT  ---------------*/
+#about {
+    background-image: url('../images/desenhoFundo.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right bottom;
+}
+
 #about p {
+    width: 60%;
     margin-top: .5rem;
     margin-left: .5rem;
 }
 
 @media screen and (max-width: 968px) {
+    #about {
+        background-size: 60%;
+        background-position: right bottom;
+    }
+
     #about p {
         margin-top: .625rem;
+        width: 100%;
     }
 }
 
