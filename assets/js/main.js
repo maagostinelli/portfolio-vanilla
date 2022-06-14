@@ -6,6 +6,12 @@ const menuList = document.querySelectorAll('.nav-item')
 const themeButton = document.getElementById('theme-button')
 const skillListOpen = document.querySelectorAll('.skills-list')
 
+const scrollButton = document.getElementById('scroll-down')
+const about = document.getElementById('about')
+
+scrollButton.addEventListener('click', () => {
+    about.scrollIntoView(true)
+})
 
 // SCROLL REVEAL ------------------------------------------
 ScrollReveal().reveal('.section', {delay: 300})
