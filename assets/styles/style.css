@@ -109,11 +109,16 @@ main {
 }
 
 .section {
-    margin: 5rem 0 3rem;
+    margin: 3rem 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 50vh;
+    min-height: 70vh;
+}
+@media screen and (max-width: 767px) {
+    .section {
+        min-height: 50vh;
+    }
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -304,7 +309,6 @@ ul.nav-list {
     width: var(--home-img);
     margin: auto;
 }
-
 .scroll-down i {
     display: block;
     width: 3rem;
@@ -350,6 +354,7 @@ ul.nav-list {
 
 .section-wrapper {
     display: block;
+    width: 100%;
 }
 
 /*---------------  ABOUT  ---------------*/
@@ -366,10 +371,9 @@ ul.nav-list {
     margin-left: .5rem;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 767px) {
     #about {
-        background-size: 60%;
-        background-position: right bottom;
+        background-image: none;
     }
 
     #about p {
@@ -379,10 +383,6 @@ ul.nav-list {
 }
 
 /*---------------  SKILLS  ---------------*/
-#skills {
-    display: block;
-}
-
 .skills-content {
     margin-top: var(--small-margin);
     margin-left: var(--small-margin);
@@ -470,17 +470,13 @@ ul.nav-list {
 }
 
 /*---------------  PROJECTS  ---------------*/
-#projects {
-    display: block;
-}
-
 .swiper-container {
     margin-top: var(--small-margin);
 }
 
 .swiper {
     width: 80%;
-    height: 50vh;
+    height: 60vh;
   }
 
 .swiper-slide {
